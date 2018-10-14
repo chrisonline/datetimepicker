@@ -32,6 +32,8 @@ import com.nineoldandroids.animation.Keyframe;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.nineoldandroids.animation.PropertyValuesHolder;
 import com.nineoldandroids.animation.ValueAnimator;
+import com.sleepbot.datetimepicker.canvassaveproxy.CanvasSaveProxy;
+import com.sleepbot.datetimepicker.canvassaveproxy.CanvasSaveProxyFactory;
 
 /**
  * A view to show a series of numbers in a circular pattern.
@@ -85,9 +87,14 @@ public class RadialTextsView extends View {
     private float mSelectionRadius;
     private Path mSelectorPath;
 
+    private final CanvasSaveProxyFactory mCanvasSaveProxyFactory;
+    private CanvasSaveProxy mCanvasSaveProxy;
+
+
     public RadialTextsView(Context context) {
         super(context);
         mIsInitialized = false;
+        mCanvasSaveProxyFactory = new CanvasSaveProxyFactory();
     }
 
     public void initialize(Resources res, String[] texts, String[] innerTexts,
@@ -338,14 +345,20 @@ public class RadialTextsView extends View {
         }
 
         // Draw the standard text everywhere except within the selector circle.
-        canvas.save(Canvas.CLIP_SAVE_FLAG);
+        if(mCanvasSaveProxy == null || !mCanvasSaveProxy.isFor(canvas)) {
+            mCanvasSaveProxy = mCanvasSaveProxyFactory.create(canvas);
+        }
+
+        mCanvasSaveProxy.save();
+
         canvas.clipPath(mSelectorPath, Region.Op.DIFFERENCE);
         mPaint.setColor(mNumbersTextColor);
         canvas.drawText(text, x, y, mPaint);
         canvas.restore();
 
         // Draw the white text only within selector circle.
-        canvas.save(Canvas.CLIP_SAVE_FLAG);
+        mCanvasSaveProxy.save();
+
         canvas.clipPath(mSelectorPath);
         mPaint.setColor(Color.WHITE);
         canvas.drawText(text, x, y, mPaint);

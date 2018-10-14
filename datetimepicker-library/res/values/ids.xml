@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="id" name="done_button">false</item>
-    <item type="id" name="cancel_button">false</item>
-    <item type="id" name="day_picker_selected_date_layout">false</item>
-    <item type="id" name="date_picker_month_and_day">false</item>
-    <item type="id" name="date_picker_year">false</item>
-    <item type="id" name="animator">false</item>
-    <item type="id" name="month_text_view">false</item>
-    <item type="id" name="day_picker_pager">false</item>
-    <item type="id" name="day_picker_back">false</item>
-    <item type="id" name="day_picker_forward">false</item>
+    <item type="id" name="done_button" />
+    <item type="id" name="cancel_button"/>
+    <item type="id" name="day_picker_selected_date_layout"/>
+    <item type="id" name="date_picker_month_and_day"/>
+    <item type="id" name="date_picker_year"/>
+    <item type="id" name="animator"/>
+    <item type="id" name="month_text_view"/>
+    <item type="id" name="day_picker_pager"/>
+    <item type="id" name="day_picker_back"/>
+    <item type="id" name="day_picker_forward"/>
 </resources>
