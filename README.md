@@ -37,7 +37,7 @@ repositories{
 }
 
 dependencies {
-    compile 'com.github.lachlanm:datetimepicker:0.0.7'
+    implement 'com.github.lachlanm:datetimepicker:0.0.7'
 }
 ```
 
