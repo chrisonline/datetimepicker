@@ -13,7 +13,6 @@ You have a recurrence picker in the same style [here](https://github.com/Shusshu
 
 ## WARNING
 
-* Requires android-appcompat-v7 and [NineOldAndroids][5]
 * Accessibility is missing for DatePicker on all devices and Below ICS devices for TimePicker.
 
 ## Description
@@ -26,7 +25,7 @@ Or browse the [source code of the sample application][3] for a complete example 
 
 ## Including in your project
 
-Last version is 0.0.5
+Last version is 0.0.7
 
 Just add the following in your build.gradle
 
@@ -38,7 +37,7 @@ repositories{
 }
 
 dependencies {
-    compile 'com.github.lachlanm:datetimepicker:0.0.5'
+    compile 'com.github.lachlanm:datetimepicker:0.0.7'
 }
 ```
 
