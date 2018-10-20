@@ -18,11 +18,11 @@ dependencies {
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'datetimepicker'
+    bintrayName = 'datetime-picker'
 
     publishedGroupId = 'com.colapps.datetimepickerlibrary'
     libraryName = 'DateTimePicker'
-    artifact = 'datetimepickerlibrary'
+    artifact = 'datetimepicker-library'
 
     libraryDescription = 'DateTimePicker is a library which contains the beautiful DatePicker that can be seen in the new Google Agenda app.'
 
