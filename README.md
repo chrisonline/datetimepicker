@@ -37,7 +37,7 @@ repositories{
 }
 
 dependencies {
-    implement 'com.colapps.datetimepickerlibrary:datetimepicker-library:0.0.7'
+    implement 'com.colapps:datetimepicker-library:0.0.7'
 }
 ```
 
